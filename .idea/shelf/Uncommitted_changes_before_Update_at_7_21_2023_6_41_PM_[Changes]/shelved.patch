@@ -1,0 +1,14 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+new file mode 100644
+--- /dev/null	(date 1689978180324)
++++ b/main.py	(date 1689978180324)
+@@ -0,0 +1,3 @@
++
++if __name__ == "__main__":
++    print("Hello World")
+\ No newline at end of file

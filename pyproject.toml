@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "bookpopularitypredictor"
+version = "0.1.0"
+description = ""
+authors = ["adighosh18 <axg1328@case.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
