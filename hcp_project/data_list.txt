@@ -1,0 +1,15 @@
+FullTexts/A_Tree_Grows_In_Brooklyn.txt
+FullTexts/Atlas_Shrugged.txt
+FullTexts/Collected_Poems_Emily_Dickinson.txt
+FullTexts/Farenheit_451.txt
+FullTexts/Grapes_of_Wrath.txt
+FullTexts/Huckleberry_Finn.txt
+FullTexts/Incidents_in_The_Life_of_a_Slave_Girl.txt
+FullTexts/Maggie_A_Girl_of_The_Streets.txt
+FullTexts/Slaughterhouse-five.txt
+FullTexts/The_Awakening.txt
+FullTexts/The_Cruicble.txt
+FullTexts/The_House_of_Mirth.txt
+FullTexts/The_Jungle.txt
+FullTexts/The_Portrait_of_a_Lady.txt
+FullTexts/Walden.txt

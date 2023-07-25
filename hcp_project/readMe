@@ -1,0 +1,28 @@
+main.py: data reading, model building, training and saving
+predict.py: predict a new book's rate
+data_list.txt: each book's path
+rate.txt: rate (average score) of different books
+
+###how to read data:
+The main.py read path of each book from data_list.txt and score rate.txt
+book's path in data_list.txt must matching with scores in rate.txt
+
+###how ro train:
+simply run main.py will train
+
+###where the trained model saved?
+../model
+default saved as model1.keras
+
+###how to predict
+run predict.py
+!!!Pending for now!!!
+
+###Config the environment
+There is a requirements.txt which records the environment i am using locally. When deploy on HPC, run:
+pip install -r requirements.txt
+To install the same environment as mine.
+So library may cannot be installed successfully, doesn't matter, there are serval unnecessary libs in my conda env
+Mainly tensorflow 2.3.0 will works, hopefully
+
+Any issues, text me any time
