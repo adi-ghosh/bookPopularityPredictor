@@ -3,6 +3,7 @@ predict.py: predict a new book's rate
 data_list.txt: each book's path
 rate.txt: rate (average score) of different books
 
+
 ###how to read data:
 The main.py read path of each book from data_list.txt and score rate.txt
 book's path in data_list.txt must matching with scores in rate.txt
