@@ -4,6 +4,7 @@ import tensorflow as tf
 import re
 from tensorflow import keras
 from tensorflow.keras import layers
+from sklearn.preprocessing import LabelEncoder
 
 # read text data from data_list.txt
 my_file = open("data_list.txt", "r")
@@ -27,6 +28,9 @@ rate_data = my_file.read()
 rate = rate_data.split("\n")
 print(rate)
 my_file.close()
+
+lb = LabelEncoder()
+rate = lb.fit_transform(rate)
 
 # build data frame ("test", "label")
 data = pd.DataFrame([])
