@@ -19,12 +19,17 @@ if __name__ == '__main__':
     booktextlist = []
     y = []
 
+    percentage = 10
+    upperlimit = 0.5+(0.5*(percentage/100))
+    lowerlimit = 0.5-(0.5*(percentage/100))
+
     with open('dataset.csv', newline='', encoding='utf-8-sig') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             y.append(row['rating'])
             with open(row['textpath'], encoding="utf8") as f:
                 contents = f.read()
+                contents = contents[int(len(contents) * lowerlimit):int(len(contents) * upperlimit)]
                 #print(contents)
                 booktextlist.append(contents)
 

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4c5b9d4-754b-4174-972f-46e76441b84b" name="Changes" comment="Added main file.">
+    <list default="true" id="e4c5b9d4-754b-4174-972f-46e76441b84b" name="Changes" comment="Added main file. Managed string to float conversion error.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hcp_project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/hcp_project/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/A_Tree_Grows_In_Brooklyn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/A_Tree_Grows_In_Brooklyn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Atlas_Shrugged.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Atlas_Shrugged.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Huckleberry_Finn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Huckleberry_Finn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/The_Awakening.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/The_Awakening.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Adi/Desktop/MicroIndetationStressStrain-master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Adi/Desktop/MicroIndetationStressStrain-master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690080835486</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added main file. Managed string to float conversion error.">
+      <created>1690328571128</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690328571128</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -75,15 +83,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added main file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added main file." />
+    <MESSAGE value="Added main file. Managed string to float conversion error." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added main file. Managed string to float conversion error." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="8" />
+          <line>50</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
