@@ -12,6 +12,7 @@ pd = "^0.0.4"
 pandas = "^2.0.3"
 nltk = "^3.8.1"
 transformers = "^4.31.0"
+keras = "^2.13.1"
 
 
 [build-system]

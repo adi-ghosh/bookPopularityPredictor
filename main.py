@@ -1,11 +1,21 @@
-import csv
+import csv, random, re, nltk
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-import nltk
+# import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer
 from nltk.corpus import stopwords
-from sklearn.pipeline import make_pipeline, Pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
+# from sklearn.linear_model import SGDClassifier
+# from sklearn.pipeline import Pipeline
+# from keras.layers import Dropout
+# from keras.models import Sequential
+# from keras.layers import Dense
+# import tensorflow as tf
+from sklearn.model_selection import cross_val_score, train_test_split
+from sklearn import svm
+
+# from tensorflow import keras
+# from tensorflow.keras import layers, models
+# from tensorflow.keras.models import Sequential
+# from tensorflow.keras.layers import Dense
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -22,6 +32,7 @@ if __name__ == '__main__':
     percentage = 10
     upperlimit = 0.5+(0.5*(percentage/100))
     lowerlimit = 0.5-(0.5*(percentage/100))
+    noofwords = 10000
 
     with open('dataset.csv', newline='', encoding='utf-8-sig') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -29,8 +40,12 @@ if __name__ == '__main__':
             y.append(row['rating'])
             with open(row['textpath'], encoding="utf8") as f:
                 contents = f.read()
-                contents = contents[int(len(contents) * lowerlimit):int(len(contents) * upperlimit)]
-                #print(contents)
+                contents = re.sub('[^A-Za-z ]+', '', contents)
+                contents = contents.lower()
+                #contents = contents[int(len(contents) * lowerlimit):int(len(contents) * upperlimit)]
+                words = list(map(str, contents.split()))
+                contents = " ".join(random.sample(words, noofwords))
+                " ".join(contents.split())
                 booktextlist.append(contents)
 
         # Instantiate CountVectorizer
@@ -48,11 +63,30 @@ if __name__ == '__main__':
         # Print out the df
         # print(X)
 
-        clf = make_pipeline(StandardScaler(), SVC(gamma='auto'))
-        clf.fit(X.to_numpy(), y)
-        Pipeline(steps=[('standardscaler', StandardScaler()),
-                        ('svc', SVC(gamma='auto'))])
-        print(clf.predict([[X.to_numpy()[0]]]))
+        # clf = make_pipeline(StandardScaler(), SVC(gamma='auto'))
+        # clf.fit(X.to_numpy(), y)
+        # Pipeline(steps=[('standardscaler', StandardScaler()),
+        #                 ('svc', SVC(gamma='auto'))])
+        # print(clf.predict([[X.to_numpy()[0]]]))
+
+        # model = Sequential()
+        # model.add(Dense(50, input_shape=(noofwords,), activation='relu'))
+        # model.add(Dense(1, activation='sigmoid'))
+        # # compile network
+        # model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+        # scores = cross_val_score(model, X, y, cv=5)
+        # print("%0.2f accuracy with a standard deviation of %0.2f" % (scores.mean(), scores.std()))
+
+        # text_clf = Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('clf', SGDClassifier(loss='hinge', penalty='l2',alpha = 1e-3, random_state = 42,max_iter = 5, tol = None))])
+        # text_clf.fit(X, y)
+        # predicted = text_clf.predict(docs_test)
+        # np.mean(predicted == twenty_test.target)
+
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.4, random_state = 0)
+        clf = svm.SVC(kernel='linear', C=1, random_state=42).fit(X_train, y_train)
+        print(clf.score(X_test, y_test))
+        #print("%0.2f accuracy with a standard deviation of %0.2f" % (scores.mean(), scores.std()))
+
 
 
 

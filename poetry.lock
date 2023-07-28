@@ -123,6 +123,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "keras"
+version = "2.13.1"
+description = "Deep learning for humans."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
 name = "nltk"
 version = "3.8.1"
 description = "Natural Language Toolkit"
@@ -462,7 +470,7 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "1effbe62f4aa696e1e4522e811df4f90064f23eba98fe8eb0551b49094e11998"
+content-hash = "62adc669985f6e3b6c1c6b6fab59b6ac936154718c286c0d6285cbbbff1efe51"
 
 [metadata.files]
 certifi = [
@@ -573,6 +581,10 @@ idna = [
 joblib = [
     {file = "joblib-1.3.1-py3-none-any.whl", hash = "sha256:89cf0529520e01b3de7ac7b74a8102c90d16d54c64b5dd98cafcd14307fdf915"},
     {file = "joblib-1.3.1.tar.gz", hash = "sha256:1f937906df65329ba98013dc9692fe22a4c5e4a648112de500508b18a21b41e3"},
+]
+keras = [
+    {file = "keras-2.13.1-py3-none-any.whl", hash = "sha256:5ce5f706f779fa7330e63632f327b75ce38144a120376b2ae1917c00fa6136af"},
+    {file = "keras-2.13.1.tar.gz", hash = "sha256:5df12cc241a015a11b65ddb452c0eeb2744fce21d9b54ba48db87492568ccc68"},
 ]
 nltk = [
     {file = "nltk-3.8.1-py3-none-any.whl", hash = "sha256:fd5c9109f976fa86bcadba8f91e47f5e9293bd034474752e92a520f81c93dda5"},
