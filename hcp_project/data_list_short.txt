@@ -1,0 +1,10 @@
+ShortStories/The_Last_Question.txt
+ShortStories/Bartleby, the Scrivener.txt
+ShortStories/Rip_Van_Winkle.txt
+ShortStories/Tell_Tale_Heart.txt
+ShortStories/The_Last_Question.txt
+ShortStories/The_Lottery.txt
+ShortStories/The_Monkeys_Paw.txt
+ShortStories/The_Most_Dangerous_Game.txt
+ShortStories/The_Turn_of_the_Screw.txt
+ShortStories/The_Yellow_Wallpaper.txt

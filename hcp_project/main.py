@@ -7,7 +7,7 @@ from tensorflow.keras import layers
 from sklearn.preprocessing import LabelEncoder
 
 # read text data from data_list.txt
-my_file = open("data_list.txt", "r")
+my_file = open("data_list_short.txt", "r")
 path_data = my_file.read()
 paths = path_data.split("\n")
 print(paths)
@@ -23,20 +23,23 @@ for path in paths:
 
 # read rate scores from rate.txt
 rate = []
-my_file = open("rate.txt", "r")
+rate_str = []
+my_file = open("rate_short.txt", "r")
 rate_data = my_file.read()
-rate = rate_data.split("\n")
+rate_str = rate_data.split("\n")
+for score in rate_str:
+    rate.append(float(score))
 print(rate)
 my_file.close()
 
-lb = LabelEncoder()
-rate = lb.fit_transform(rate)
+
 
 # build data frame ("test", "label")
 data = pd.DataFrame([])
 data["text"] = contents
 data["label"] = rate
 print(data)
+
 
 # tokenize the text data
 token = re.compile('[A-Za-z]+|[!?,.()]')
@@ -50,6 +53,8 @@ word_set = set()
 for text in data.text:
     for word in text:
         word_set.add(word)
+
+
 
 # make dataset for training, make sure the size of each book's vector is the same
 max_word = len(word_set) + 1

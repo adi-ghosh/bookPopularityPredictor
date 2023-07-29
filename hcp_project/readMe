@@ -16,8 +16,9 @@ simply run main.py will train
 default saved as model1.keras
 
 ###how to predict
+Save the path of testing data into data_list_short_test.txt
 run predict.py
-!!!Pending for now!!!
+
 
 ###Config the environment
 There is a requirements.txt which records the environment i am using locally. When deploy on HPC, run:
