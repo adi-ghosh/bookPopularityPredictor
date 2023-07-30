@@ -56,7 +56,7 @@ print("Shape of data_ok: ", data_ok.shape)
 
 
 
-model = keras.models.load_model('model/model1.keras')
+model = keras.models.load_model('model/model3.keras')
 result = model.predict(data_ok)
 
 print(result)

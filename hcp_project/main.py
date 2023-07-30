@@ -77,8 +77,8 @@ def train_model():
                          recurrent_dropout=0.5)))
     model.add(layers.Dropout(0.5))
     model.add(layers.Dense(1, activation='sigmoid'))
-    model.compile(optimizer=keras.optimizers.RMSprop(),
-              loss='binary_crossentropy',
+    model.compile(optimizer=keras.optimizers.Adam(),
+              loss='mean_squared_error',
               metrics=['acc'])
     return model
 
@@ -95,4 +95,4 @@ history = model.fit(data_ok,
                      callbacks=[learning_rate_reduction])
 
 # save the model as model1.keras
-model.save('model/model1.keras')
+model.save('model/model3.keras')
