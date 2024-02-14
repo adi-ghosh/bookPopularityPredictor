@@ -2,7 +2,6 @@
 
 ## CSDS 438 Group 3
 Adi Ghosh, Xiao Wang, Sarah Kurelowech, and Sarah Kugelmas
-[@SarahKugelmas](https://github.com/SarahKugelmas)
 
 ### Contents
 1. [Problem Statement](#problem-statement)
